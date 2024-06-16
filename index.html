@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #181818;
+        }
+        .page {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            text-align: center;
+        }
+        .active {
+            display: flex;
+        }
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px #3498db;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .button-container a,
+        .back-button {
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.2em;
+        }
+        .button-container a:hover,
+        .back-button:hover {
+            background-color: #2980b9;
+            transform: scale(1.1);
+        }
+        .page1 {
+            background: linear-gradient(to right, #ffebcd, #ffe4b5);
+        }
+        .page1 h1 {
+            color: #8b4513;
+            text-shadow: 1px 1px #daa520;
+            border: 3px solid #8b4513;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fffaf0;
+        }
+        .page2 {
+            background: linear-gradient(to right, #e6e6fa, #d8bfd8);
+        }
+        .page2 h1 {
+            color: #4b0082;
+            text-shadow: 1px 1px #9400d3;
+            border: 3px solid #4b0082;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #f8f8ff;
+        }
+        .page3 {
+            background: linear-gradient(to right, #ffe4e1, #ffcccb);
+        }
+        .page3 h1 {
+            color: #c71585;
+            text-shadow: 1px 1px #ff69b4;
+            border: 3px solid #c71585;
+            padding: 20px;
+            border-radius: 15px;
+            background-color: #fff0f5;
+        }
+        .back-button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Page -->
+    <div id="main-page" class="page active">
+        <h1>Eid Mubarak</h1>
+        <div class="button-container">
+            <a href="#" onclick="showPage('page1')">Page 1</a>
+            <a href="#" onclick="showPage('page2')">Page 2</a>
+            <a href="#" onclick="showPage('page3')">Page 3</a>
+        </div>
+    </div>
+
+    <!-- Page 1 -->
+    <div id="page1" class="page page1">
+        <h1>yenaad aalyke bl sa77a wl aafiye w ra7et l bell aham shi w nshala ma mnshufk 2ella mabsutaa</h1>
+        <div class="back-button-container">
+            <a href="#" class="back-button" onclick="showPage('main-page')">Back</a>
+        </div>
+    </div>
+
+    <!-- Page 2 -->
+    <div id="page2" class="page page2">
+        <h1>w nshala 3a 2ble l naje7 wl daraje w trte7e mn 7ofoz l teri5 wl falsafee</h1>
+        <div class="back-button-container">
+            <a href="#" class="back-button" onclick="showPage('main-page')">Back</a>
+        </div>
+    </div>
+
+    <!-- Page 3 -->
+    <div id="page3" class="page page3">
+        <h1>w hon na22e l jemal l bte3jbek 3tebrion mawjudin hon bas 3mlta la lsaf7a la 5alike to2re aktr(wej aam yed7ak)l2n ma fie 7ot wjouh hon</h1>
+        <div class="back-button-container">
+            <a href="#" class="back-button" onclick="showPage('main-page')">Back</a>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
